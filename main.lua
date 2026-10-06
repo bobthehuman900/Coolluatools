@@ -38,15 +38,22 @@ function home()
   
 function terrain()
     local temp = 5
-    local change = math.random(-1,1)
-    temp = temp + change
-    if temp < 0 then
-      temp = 0
+    for _ = 1, 10 do
+        local change = math.random(-1,1)
+        temp = temp + change
+        if temp < 0 then
+          temp = 0
+        end
+        if temp > 10 then
+          temp = 10
+        end
+        if temp < 4 then
+         ter = "W"
+        elseif temp > 6 then
+         ter = "G"
+        end
     end
-    if temp > 10 then
-      temp = 10
-    end
-    if temp < 4 then
-      local ter = 
-  end
+end
+
+
     
