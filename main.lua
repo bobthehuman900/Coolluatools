@@ -35,24 +35,28 @@ function home()
     print("ERROR- YELLOW SCREEN OF DEATH. THERE ISNT A YELLOW SCREEN, BUT PRETEND THERE IS ONE.")
     back()
   end
+end
   
 function terrain()
-    local temp = 5
+    local temp = 4
+    local supter = ""
     for _ = 1, 10 do
-        local change = math.random(-1,1)
+        local change = math.random(-2,2)
         temp = temp + change
         if temp < 0 then
-          temp = 0
+            temp = 0
         end
         if temp > 10 then
-          temp = 10
+            temp = 10
         end
         if temp < 4 then
-         ter = "W"
+            ter = "W"
         elseif temp > 6 then
-         ter = "G"
+            ter = "G"
+        else
+            ter = "G"
         end
-      supter = (supter .. ter)
+        supter = supter .. ter
     end
     print("Your terrain!-")
     print(supter)
@@ -61,3 +65,4 @@ end
 
 
     
+home()
