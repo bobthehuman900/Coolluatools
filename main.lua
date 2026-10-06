@@ -52,7 +52,11 @@ function terrain()
         elseif temp > 6 then
          ter = "G"
         end
+      supter = (supter .. ter)
     end
+    print("Your terrain!-")
+    print(supter)
+    back()
 end
 
 
